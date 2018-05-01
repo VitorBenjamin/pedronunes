@@ -32,47 +32,109 @@
 </nav>
 @include('layouts.navbar-retratil')
 <!-- FIM SESSÃO DE NAVBAR E IMAGEM TOPO -->
-<div class="container-fluid">
-    <div class="row justify-content-center" style="margin-top:200px">
-        <div class="col-12 col-md-4">
-          <h1 class="text-center texto-galeria">Galeria</h1>
-          <p class="text-right subtexto-galeria">CONHEÇA TODAS AS PEÇAS</p>
-      </div>
-  </div>
-</div>
-<!-- INICIO DA SESSÃO DE GALERIA-->
-@include('layouts.galeria-tab')
-<!-- FIM DA SESSÃO DE GALERIA-->
 
-<!-- INICIO SESSÃO DE ABOUT -->
-<div class="container-fluid about">
-    <div class="row justify-content-center">
-        <div class="col-sm-6 col-md-4">
-            <div class="about-img">
-                <img class="img-fluid" src="{{ asset('assets/img/_PEU0090.jpg') }}">
+<!-- INICIO DA SESSÃO DE PRODUTO-->
+<section class="cart">
+    <div class="container-fluid">
+        {{-- <div class="row justify-content-md-center">
+            <div class="col-8">
+
+            </div>
+            <div class="col-md-auto">
+
+            </div>
+            <div class="col col-lg-2">
+
+            </div>
+        </div> --}}
+        <div class="row">
+            <div class="col-md-8 text-center">
+                <img  class="img-fluid" src="{{ asset('assets/galeria/_01.jpg') }}" alt="">
+            </div>
+            <div class="col-md-4 cart-text text-left">
+                <h1>Atxuhinã Pataxó</h1>
+                <p class="desc">Mussum Ipsum, cacilds vidis litro abertis. Paisis, filhis, espiritis santis. Praesent malesuada urna nisi, quis volutpat erat hendrerit non.</p>
+                <p class="title">FORMATO</p>
+                <p class="format">16:9</p>
+                <p class="title">SELECIONE O PAPEL</p>
+                <ul>
+                    <li class="produto-item">
+                        <a class="thumb remove-href">i<span><img class="img-fluid" src="http://via.placeholder.com/320x460" alt=""></span></a>
+                        <input type='radio' value='1' name='radio' id='radio1'/>
+                        <label class="paper-label" for='radio1'>coated paper</label>
+                    </li>
+                    <li class="produto-item">
+                        <a class="thumb remove-href">i<span><img class="img-fluid" src="http://via.placeholder.com/320x460" alt=""></span></a>
+                        <input type='radio' value='2' name='radio'  id='radio2'/>
+                        <label class="paper-label" for='radio2'>nanoporous</label>
+                    </li>
+                    <li class="produto-item">
+                        <a class="thumb remove-href">i<span><img class="img-fluid" src="http://via.placeholder.com/320x460" alt=""></span></a>
+                        <input type='radio' value='3' name='radio'  id='radio3'/>
+                        <label class="paper-label" for='radio3'>brilhantes</label>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="col-sm-6 col-md-5 texto">
-            <div class="about-texto">
-                Mussum Ipsum, cacilds vidis litro abertis. Pra lá , depois divoltis porris, paradis. Manduma pindureta quium dia nois paga. Delegadis gente finis, bibendum egestas augue arcu ut est. Paisis, filhis, espiritis santis.
+    </div>
+</section>
+<!-- FIM DA SESSÃO DE PRODUTO-->
+<section id="produt0-desc">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p class="text-center full-desc">
+                    Mussum Ipsum, cacilds vidis litro abertis. Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat odio. Quem manda na minha terra sou euzis! Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid px-0">
+        <img class="img-fluid" src="{{ asset('assets/img/backdrop.jpg') }}" alt="">
+    </div>
+</section>
 
-                In elementis mé pra quem é amistosis quis leo. Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat odio. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Quem manda na minha terra sou euzis!
-                Mussum Ipsum, cacilds vidis litro abertis. Pra lá , depois divoltis porris, paradis. Manduma pindureta quium dia nois paga. Delegadis gente finis, bibendum egestas augue arcu ut est. Paisis, filhis, espiritis santis.
-
-                In elementis mé pra quem é amistosis quis leo. Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat odio. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Quem manda na minha terra sou euzis! 
-                <div class="row justify-content-between about-rodape">
-                    <div class="col-7">
-                        <p>@pedronunesfotagrafia</p>
-                    </div>
-                    <div class="col-4">
-                        <img class="img-fluid" src="{{ asset('assets/img/assinatura-color.svg') }}" alt="">
+<section id="moldura">
+    <div class="container">
+        <div class="row">
+            <div class="col molduras">
+                <h1>Molduras</h1>
+                <p class="text-left full-desc">
+                    Mussum Ipsum, cacilds vidis litro abertis. Nullam volutpat risus nec leo commodo, ut interdum diam laoreet.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="offset-sm-1 col-sm-10 col-xs-12">
+            <div class="owl-carousel owl-loaded">
+                <div class="owl-stage-outer">
+                    <div class="owl-stage">
+                        <div class="owl-item thumbnail"> 
+                            <div class="caption text-center">
+                                <p>SELECIONAR</p>
+                            </div>
+                            <img class="img-fluid" src="http://via.placeholder.com/300x220" alt=""> 
+                        </div>
+                        <div class="owl-item"> 
+                            <a href="" title="">
+                                <img class="img-fluid" src="http://via.placeholder.com/300x220" alt=""> 
+                            </a>
+                            <p>R$ 1.000,00</p>
+                        </div>
+                        <div class="owl-item"> <a href="" title=""><img class="img-fluid" src="http://via.placeholder.com/300x220" alt=""> </a></div>
+                        <div class="owl-item"> <a href="" title=""><img class="img-fluid" src="http://via.placeholder.com/300x220" alt=""> </a></div>
+                        <div class="owl-item"> <a href="" title=""><img class="img-fluid" src="http://via.placeholder.com/300x220" alt=""> </a></div>
+                        <div class="owl-item"> <a href="" title=""><img class="img-fluid" src="http://via.placeholder.com/300x220" alt=""> </a></div>
+                        <div class="owl-item"> <a href="" title=""><img class="img-fluid" src="http://via.placeholder.com/300x220" alt=""> </a></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- FIM SESSÃO DE ABOUT -->
+    <!-- Set up your HTML -->
+
+</section>
 
 <!-- INICIO FOOTER-->
 @include('layouts.footer')

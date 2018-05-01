@@ -9,19 +9,46 @@ $(document).ready(function(){
             $(this).find('.caption').slideUp(250); //.fadeOut(205)
         });    
 	$(window).scroll(function(){                          
-		if ($(this).scrollTop() > 200) {
+		if ($(this).scrollTop() > 110) {
 			$('#menu').fadeIn(500);
 		} else {
 			$('#menu').fadeOut(500);
 		}
 	});
 	$(window).scroll(function(){                          
-		if ($(this).scrollTop() < 200) {
+		if ($(this).scrollTop() < 110) {
 			$('.menu').fadeIn(500);
 		} else {
 			$('.menu').fadeOut(500);
 		}
 	});
+	var owl = $('.owl-carousel').owlCarousel({
+		loop:true,
+		nav:true,
+		dots:false,
+		margin:20,
+		nav:true,
+		navText:["<i class='material-icons icons-custom'>keyboard_arrow_left</i>","<i class='material-icons icons-custom'>keyboard_arrow_right</i>"],
+		responsive:{
+			0:{
+				items:2
+			},
+			600:{
+				items:3
+			},
+			1000:{
+				items:4
+			}
+		}
+	})
+	$(".next").click(function(){
+		console.log("asdadsa");
+		owl.trigger('owl.next');
+	})
+	$(".prev").click(function(){
+		owl.trigger('owl.prev');
+	})
+	// $(".remove-href").addClass('disabled').removeAttr("href"); 
 
 	// init Masonry
 
@@ -60,22 +87,22 @@ $(document).ready(function(){
 			}
 		}
 	}
-	if ($('.link-tab').hasClass("active")) {
-		$grid.infiniteScroll({
-			path: getPenPath,
-			append: '.grid-item',
-			outlayer: msnry,
-			status: '.page-load-status',
-			history: false,
-		});
-	}
-	$(".link-tab").on("click", function() {
-		$grid.infiniteScroll({
-			path: getPenPath,
-			append: '.grid-item',
-			outlayer: msnry,
-			status: '.page-load-status',
-			history: false,
-		});
+	// if ($('.link-tab').hasClass("active")) {
+	// 	$grid.infiniteScroll({
+	// 		path: getPenPath,
+	// 		append: '.grid-item',
+	// 		outlayer: msnry,
+	// 		status: '.page-load-status',
+	// 		history: false,
+	// 	});
+	// }
+	$grid.infiniteScroll({
+		path: getPenPath,
+		append: '.grid-item',
+		outlayer: msnry,
+		button: '.view-more-button',
+		scrollThreshold: false,
+		status: '.page-load-status',
+		history: false,
 	});
 });

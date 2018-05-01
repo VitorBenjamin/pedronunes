@@ -33,4 +33,8 @@ class HomeController extends Controller
     {
         return view('layouts.galeria-teste');
     }
+    public function produto()
+    {
+        return view('produto');
+    }
 }

@@ -161,6 +161,9 @@
               <p class="infinite-scroll-last">Fim da Lista</p>
               <p class="infinite-scroll-error">No more pages to load</p>
             </div>
+            <p class="text-center">
+              <button class="view-more-button">Ver Mais</button>
+            </p>
           </div>
           <div class="tab-pane" id="PROJETO1">
             <h4><i class="glyphicon glyphicon-user"></i></h4>Words words
