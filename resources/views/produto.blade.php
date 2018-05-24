@@ -1,52 +1,12 @@
 @extends('layouts.main')
 @section('content')
-
-<!-- INICIO SESSÃO DE NAVBAR E IMAGEM TOPO -->
-<nav class="navbar navbar-expand-md fixed-top text-center menu" style="position: absolute !important;">
-    <a class="navbar-brand" href="#">
-        <img class="img-fluid logo-topo d-block d-sm-none" src="{{asset('assets/img/logo1.png') }}" alt="">
-        <img class="img-fluid logo-topo d-none d-sm-block logo" src="{{asset('assets/img/logo.png') }}" alt="">
-    </a>
-    <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse text-center" id="navbarCollapse">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-                <a class="nav-link gray" href="#">INÍCIO <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link gray" href="#">QUEM SOMOS</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link gray" href="#">HISTÓRIA E ARTE</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link gray" href="{{ route('galeria') }}">GALERIA</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link gray" href="#">CONTATO</a>
-            </li>
-        </ul>
-    </div>
-</nav>
-@include('layouts.navbar-retratil')
+@include('layouts.navs.navbar-produto')
+@include('layouts.navs.navbar-retratil-produto')
 <!-- FIM SESSÃO DE NAVBAR E IMAGEM TOPO -->
 
 <!-- INICIO DA SESSÃO DE PRODUTO-->
 <section class="cart">
     <div class="container-fluid">
-        {{-- <div class="row justify-content-md-center">
-            <div class="col-8">
-
-            </div>
-            <div class="col-md-auto">
-
-            </div>
-            <div class="col col-lg-2">
-
-            </div>
-        </div> --}}
         <div class="row">
             <div class="col-md-8 text-center">
                 <img  class="img-fluid" src="{{ asset('assets/galeria/_01.jpg') }}" alt="">
@@ -74,6 +34,8 @@
                         <label class="paper-label" for='radio3'>brilhantes</label>
                     </li>
                 </ul>
+                <button class="comprar-topo" type="button">Comprar</button>
+                <button class="comprar-moldura" type="button">Molduras</button>
             </div>
         </div>
     </div>
@@ -94,7 +56,7 @@
     </div>
 </section>
 
-<section id="moldura">
+<section id="molduras" class="my-5">
     <div class="container">
         <div class="row">
             <div class="col molduras">
@@ -105,7 +67,7 @@
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="container-fluid">
         <div class="offset-sm-1 col-sm-10 col-xs-12">
             <div class="owl-carousel owl-loaded">
                 <div class="owl-stage-outer">
@@ -132,8 +94,28 @@
             </div>
         </div>
     </div>
-    <!-- Set up your HTML -->
+</section>
 
+<section class="my-5">
+    <div class="container">
+        <div class="row no-gutters justify-content-end">
+            <div class="col-xs-12 col-md-2 quadro">
+                <h5>QUADRO</h5>
+                <p>R$ 30.000,00</p>
+            </div>
+            <div class="col-xs-12 col-md-2 moldura">
+                <h5>MOLDURA</h5>
+                <p>R$ 30.000,00</p>
+            </div>
+            <div class="col-xs-12 col-md-3 total">
+                <h5>TOTAL</h5>
+                <p>R$ 30.000,00</p>
+            </div>
+            <div class="col-xs-12 col-md-2 finalizar">
+                <button class="comprar" type="button">Finalizar</button>
+            </div>
+        </div>
+    </div>
 </section>
 
 <!-- INICIO FOOTER-->

@@ -2,8 +2,8 @@
 @section('content')
 
 <!-- INICIO SESSÃO DE NAVBAR E IMAGEM TOPO -->
-<nav class="navbar navbar-expand-md fixed-top text-center menu" style="position: absolute !important;">
-    <a class="navbar-brand" href="#">
+<nav class="navbar navbar-expand-md fixed-top text-center menu" style="position: absolute !important;" id="home">
+    <a class="navbar-brand" href="{{route('home')}}" style="z-index:1200">
         <img class="img-fluid logo-topo d-block d-sm-none" src="{{asset('assets/img/logo1.png') }}" alt="">
         <img class="img-fluid logo-topo d-none d-sm-block logo" src="{{asset('assets/img/logo.png') }}" alt="">
     </a>
@@ -13,24 +13,24 @@
     <div class="collapse navbar-collapse text-center" id="navbarCollapse">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-                <a class="nav-link gray" href="#">INÍCIO <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#home">INÍCIO <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link gray" href="#">QUEM SOMOS</a>
+                <a class="nav-link" href="#about">QUEM SOMOS</a>
+            </li>
+            {{-- <li class="nav-item">
+                <a class="nav-link" href="#historia">HISTÓRIA E ARTE</a>
+            </li> --}}
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('galeria') }}">GALERIA</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link gray" href="#">HISTÓRIA E ARTE</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link gray" href="{{ route('galeria') }}">GALERIA</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link gray" href="#">CONTATO</a>
+                <a class="nav-link" href="#contato">CONTATO</a>
             </li>
         </ul>
     </div>
 </nav>
-@include('layouts.navbar-retratil')
+@include('layouts.navs.navbar-retratil-galeria')
 <!-- FIM SESSÃO DE NAVBAR E IMAGEM TOPO -->
 <div class="container-fluid">
     <div class="row justify-content-center" style="margin-top:200px">
@@ -45,7 +45,7 @@
 <!-- FIM DA SESSÃO DE GALERIA-->
 
 <!-- INICIO SESSÃO DE ABOUT -->
-<div class="container-fluid about">
+<div class="container-fluid about" id="about">
     <div class="row justify-content-center">
         <div class="col-sm-6 col-md-4">
             <div class="about-img">

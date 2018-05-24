@@ -1,13 +1,20 @@
 $(document).ready(function(){
 	$("[rel='tooltip']").tooltip();    
 
-	$('.thumbnail').hover(
+	$('.card').hover(
+		function(){
+            $(this).find('.overlay').slideDown(250); //.fadeIn(250)
+        },
+        function(){
+            $(this).find('.overlay').slideUp(250); //.fadeOut(205)
+        });  
+	$('.grid-item').hover(
 		function(){
             $(this).find('.caption').slideDown(250); //.fadeIn(250)
         },
         function(){
             $(this).find('.caption').slideUp(250); //.fadeOut(205)
-        });    
+        });   
 	$(window).scroll(function(){                          
 		if ($(this).scrollTop() > 110) {
 			$('#menu').fadeIn(500);
@@ -20,6 +27,15 @@ $(document).ready(function(){
 			$('.menu').fadeIn(500);
 		} else {
 			$('.menu').fadeOut(500);
+		}
+	});
+	$('a[href^="#"].nav-link').on('click', function(event) {
+		var target = $(this.getAttribute('href'));
+		if( target.length ) {
+			event.preventDefault();
+			$('html, body').stop().animate({
+				scrollTop: target.offset().top
+			}, 1000);
 		}
 	});
 	var owl = $('.owl-carousel').owlCarousel({
@@ -54,7 +70,7 @@ $(document).ready(function(){
 
 	var $grid = $('.grid').masonry({
 		itemSelector: 'none', 
-		columnWidth: '.grid-sizer',
+		columnWidth: '.grid-item',
 		percentPosition: true,
 		transitionDuration: '0.8s',
 		gutter: 10,
@@ -87,15 +103,6 @@ $(document).ready(function(){
 			}
 		}
 	}
-	// if ($('.link-tab').hasClass("active")) {
-	// 	$grid.infiniteScroll({
-	// 		path: getPenPath,
-	// 		append: '.grid-item',
-	// 		outlayer: msnry,
-	// 		status: '.page-load-status',
-	// 		history: false,
-	// 	});
-	// }
 	$grid.infiniteScroll({
 		path: getPenPath,
 		append: '.grid-item',
@@ -106,3 +113,5 @@ $(document).ready(function(){
 		history: false,
 	});
 });
+
+//Initialize Masonry inside Bootstrap 3 Tab component

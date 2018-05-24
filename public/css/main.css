@@ -1,16 +1,16 @@
 body{
 	font-family: 'Montserrat', sans-serif;
 }
-section{
-	margin-top: 80px;
-}
 
 * { box-sizing: border-box; }
 button:focus {
-    outline: 1px dotted;
-    outline: 0px;
+	outline: 1px dotted;
+	outline: 0px;
 }
-
+a:hover{
+	text-decoration: none;
+	color: #fff;
+}
 /* ---- grid ---- */
 html { overflow-y: scroll; }
 /* clear fix */
@@ -47,7 +47,7 @@ html { overflow-y: scroll; }
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
-.menor > h1{
+.img-wide > h1{
 	font-size: 55px;
 	top: 33.333%;
 	left: 50%;
@@ -65,17 +65,69 @@ html { overflow-y: scroll; }
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
-.menor > p{
+.img-wide > p{
 	font-size: 13px;
 	top: 63%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
+.card {
+	position:relative;
+	overflow:hidden;	
+}
+.overlay {
+	display: none;
+	position: absolute;
+	background-color: rgba(238, 220, 193, 0.94);
+	width: 90%;
+	height: 90%;
+	color: #fff !important;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.overlay > h1{
+	color: #b0946e;
+	font-size: 75px;
+	font-family: 'Playfair Display', serif;
+	font-style: italic;
+	font-weight: 900;
+	line-height: 0.888;
+	letter-spacing: 1px;
+	position: absolute;
+	top: 35%;
+	left: 0;
+	/* transform: translate(-50%, -50%);  */
+}
+.menor > h1{
+	font-size: 65px;
+	top: 23.333%;
+	/*transform: translate(-50%, -50%); */
+
+}
+.overlay > h1 > span{
+	color: #000;
+	font-size: 15px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	font-family: 'Montserrat', sans-serif;
+	font-style: normal;
+	/* position: absolute;
+	top: 62%; */
+	/*transform: translate(-50%, -50%); */
+}
+.menor > h1 > span{
+	font-size: 13px;
+	font-family: 'Montserrat', sans-serif;
+	/* top: 63%; */
+	/*transform: translate(-50%, -50%); */
+}
+
 /* ---- .grid-item ---- */
 .grid-sizer,
 .grid-item {
 	width: 32.666%;
-
 }
 
 .grid-item {
@@ -182,7 +234,8 @@ html { overflow-y: scroll; }
 .etiqueta>p{
 	line-height: 1;
 }
-.etiqueta>p>.material-icons{
+.etiqueta>p>a>.material-icons{
+	color: white;
 	font-size: 50px !important;
 	position: relative;
 	top: 35px;
@@ -382,25 +435,25 @@ html { overflow-y: scroll; }
 /* FIM TABS */
 
 /* INICIO FOOTER */
-#footer {
+#contato {
 	padding: 60px 0;
 	margin-top: 0;
 }
 .footer-logo{
 	margin: 0px 0 85px 0;
 }
-#footer {
+#contato {
 	background: #2a2a26 !important;
 }
-#footer>.container-fluid {
+#contato>.container-fluid {
 	padding-right: 15px;
 	padding-left: 15px;
 }
-#footer ul.social li{
+#contato ul.social li{
 	width: 40px;
 	padding: 3px 0;
 }
-#footer ul.social li a i {
+#contato ul.social li a i {
 	margin-right: 5px;
 	font-size:25px;
 	-webkit-transition: .5s all ease;
@@ -498,12 +551,12 @@ html { overflow-y: scroll; }
 	font-weight: 900;
 	line-height: 0.888;
 	letter-spacing: 1px;
-	margin-top: 35px;
+	margin-top: 10px;
 
 }
 .cart-text > .desc {
 	color: #969696;
-	width: 60%;
+	width: 350px;
 	margin: 21px 0;
 	line-height: 2.2;
 	font-size: 13px;
@@ -602,6 +655,69 @@ input:checked + .paper-label {
 .owl-carousel .owl-nav button.owl-next > i,.owl-carousel .owl-nav button.owl-prev > i{
 	font-size: 56px !important;
 }
+.owl-item>p{
+	font-size: 16px;
+	font-weight: 800;
+	color: #4e4e4e;
+	margin: 10px 0 0 5px;
+}
+.quadro>h5,.moldura>h5,.total>h5{
+	font-size: 15px;
+	color: #989898;
+	margin-bottom: 0;
+}
+.quadro>p{
+	font-weight: 700;
+	color: #636363;
+}
+.moldura>p{
+	font-weight: 700;
+	color: #636363;
+}
+.total>p{
+	font-weight: 700;
+	color: #636363;
+	font-size: 30px;
+}
+.comprar,.comprar-topo{
+	background-color: #35b793;
+	border: 0;
+	width: 100%;
+	height: 50px;
+	font-family: 'Playfair Display', serif;
+	color: white;
+	font-style: italic;
+	font-size: 30px;
+	font-weight: 600;
+	cursor: pointer;
+	-webkit-transition: linear 0.2s; /* For Safari 3.1 to 6.0 */
+	transition: linear 0.2s;
+}
+.comprar-topo{
+	width: 200px;
+}
+.comprar-moldura{
+	line-height: 0;
+	vertical-align: center;
+	margin-top: 5px;
+	background-color: #b0946e;
+	border: 0;
+	width: 200px;
+	height: 35px;
+	font-family: 'Playfair Display', serif;
+	color: white;
+	font-style: italic;
+	font-size: 25px;
+	font-weight: 600;
+	cursor: pointer;
+	-webkit-transition: linear 0.2s; /* For Safari 3.1 to 6.0 */
+	transition: linear 0.2s;
+}
+
+.comprar:hover{
+	font-size: 28px;
+	height: 48px;
+}
 /* FIM PRODUTO */
 
 /* INICO MOLDURAS */
@@ -642,31 +758,6 @@ input:checked + .paper-label {
 		width: 47%;
 	}
 
-	.caption > h1 {
-		font-size: 23px;
-		top: 43%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-	}
-	.menor > h1 {
-		font-size: 20px;
-		top: 35%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-	}
-
-	.caption > p {
-		font-size: 7px;
-		top: 64%;
-		left: 0%;
-		transform: translate(0%, -40%);
-	}
-	.menor > p {
-		font-size: 7px;
-		top: 70%;
-		left: 0%;
-		transform: translate(0%, -40%);
-	}
 	.texto-galeria {
 		font-size: 70px;
 	}
@@ -678,14 +769,35 @@ input:checked + .paper-label {
 	.owl-nav{
 		display: none;
 	}
+	.footer-logo {
+		text-align: center;
+		margin: 0;
+	}
 }
 
 @media (max-width:767px){	
-	#footer h5 {
+	#contato h5 {
 		padding-left: 0;
 		border-left: transparent;
 		padding-bottom: 0px;
 		margin-bottom: 10px;
+	}
+	.overlay > h1 {
+		font-size: 23px;
+		top: 43%;
+	}
+	.menor > h1 {
+		font-size: 20px;
+		top: 35%;
+	}
+
+	.overlay > h1 > span {
+		font-size: 7px;
+		top: 64%;
+	}
+	.menor > h1 > span {
+		font-size: 7px;
+		top: 70%;
 	}
 
 }
@@ -699,6 +811,42 @@ input:checked + .paper-label {
 		top: 25px !important;
 		position: relative !important;
 	}
+	.overlay > h1 {
+		font-size: 33px;
+		top: 33%;
+	}
+	.menor > h1 {
+		font-size: 30px;
+		top: 25%;
+	}
+
+	.overlay > h1 > span {
+		font-size: 10px;
+		
+	}
+	.menor > h1 > span {
+		font-size: 10px;
+		
+	} 
+}
+@media (min-width: 992px) { 
+	.overlay > h1 {
+		font-size: 43px;
+		top: 30%;
+	}
+	.menor > h1 {
+		font-size: 40px;
+		top: 15%;
+	}
+
+	.overlay > h1 > span {
+		font-size: 10px;
+		
+	}
+	.menor > h1 > span {
+		font-size: 10px;
+		
+	} 
 }
 
 @media (min-width: 1200px){ 
@@ -710,6 +858,38 @@ input:checked + .paper-label {
 		top: 18px !important;
 		position: relative !important;
 		right: 100px;
+
+	}
+	.overlay > h1{
+		color: #b0946e;
+		font-size: 75px;
+		font-family: 'Playfair Display', serif;
+		font-style: italic;
+		font-weight: 900;
+		line-height: 0.888;
+		letter-spacing: 1px;
+		position: absolute;
+		top: 27%;
+	}
+	.menor > h1{
+		font-size: 65px;
+		top: 18.888%;
+
+	}
+	.overlay > h1 > span{
+		color: #000;
+		font-size: 15px;
+		font-weight: 600;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		font-family: 'Montserrat', sans-serif;
+		font-style: normal;
+
+	}
+	.menor > h1 > span{
+		font-size: 13px;
+		font-family: 'Montserrat', sans-serif;
+
 
 	}
 }

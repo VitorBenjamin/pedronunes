@@ -1,8 +1,8 @@
 <!-- Footer -->
-<section id="footer">
+<section id="contato">
 	<div class="container">
 		<div class="row justify-content-center">
-			<div class="col-md-4">
+			<div class="col-md-4 text-center">
 				<img src="{{ asset('assets/img/logo.png') }}" alt="" class="img-fluid footer-logo">
 			</div>
 		</div>

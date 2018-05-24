@@ -2,10 +2,10 @@
 @section('content')
 
 <!-- INICIO SESSÃO DE NAVBAR E IMAGEM TOPO -->
-@include('layouts.navbar')
-@include('layouts.navbar-retratil')
+@include('layouts.navs.navbar')
+@include('layouts.navs.navbar-retratil')
 
-<div class="container-fluid img-relative px-0">
+<div class="container-fluid img-relative px-0" id="home">
     <img class="img-fluid" src="{{ asset('assets/img/topo.jpg') }}">
     <div class="centered titulo-topo d-none d-sm-block">
         <h1>Awêry, curumin.</h1>
@@ -13,7 +13,9 @@
     </div>
     <div class="bottom-center text-right etiqueta">
         <p>
-            <i class="material-icons">loyalty</i>
+            <a href="{{route('produto')}}" title="">
+                <i class="material-icons">loyalty</i>
+            </a>
             <span>Atxuhinã Pataxó</span> 
             <br>
             <span>R$ 30.000,00</span>
@@ -24,7 +26,7 @@
 <!-- FIM SESSÃO DE NAVBAR E IMAGEM TOPO -->
 
 <!-- INICIO SESSÃO DE ABOUT -->
-<div class="container-fluid about">
+<div class="container-fluid about" id="about">
     <div class="row justify-content-center">
         <div class="col-sm-6 col-md-4">
             <div class="about-img">
@@ -58,7 +60,7 @@
 <!-- FIM DA SESSÃO DE NAVBAR-->
 
 <!-- INICIO SESSÃO DE PROJETOS-->
-<section>
+<section class="my-5">
     <div class="container-fluid img-relative px-0">
         <img class="img-fluid" src="{{ asset('assets/img/topo.jpg') }}">
         <div class="centered projeto">
@@ -72,7 +74,8 @@
 <!-- FIM DA SESSÃO DE PROJETOS-->
 
 <!-- INICIO DA SESSÃO DE GALERIA-->
-@include('layouts.galeria-tab')
+
+@include('layouts.galeria-tab-index')
 <!-- FIM DA SESSÃO DE GALERIA-->
 
 <!-- INICIO FOOTER-->

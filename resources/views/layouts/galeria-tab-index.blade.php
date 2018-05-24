@@ -1,7 +1,10 @@
 <section class="galeria-section">
   <div class="container-fluid">
     <div class="row justify-content-center">
-      <div class="col-9s">
+      <div class="col-sm-3 col-xs-12">
+        <h1 class="text-center texto-galeria">Galeria</h1>
+      </div>
+      <div class="col-9s" style="padding: 41px 0 0 0;">
         <ul class="nav nav-tabs nav-justified" id="myTab">
           <li class="active"><a href="#TODOS" data-toggle="tab" class="link-tab active show">TODOS</a></li>
           <li class="dropdown">

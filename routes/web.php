@@ -11,13 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+// Route::get('/', function () {
+//     return view('index');
+// });
 
-Auth::routes();
+//Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
 Route::get('/galeria', 'HomeController@galeria')->name('galeria');
 Route::get('/galeria-teste', 'HomeController@galeria2')->name('galeria2');
 Route::get('/produto', 'HomeController@produto')->name('produto');
