@@ -5,43 +5,46 @@
       <div class="carousel-inner">
         <div class="carousel-item active">
           <div class="row justify-content-center">
-            <div class="col-sm-6 col-md-offset-1 col-md-5">
+            <div class="col-10 col-md-4">
               <p class="slide-texto">
                 Mussum Ipsum, cacilds vidis litro abertis. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl. Detraxit consequat et quo num tendi nada. Diuretics paradis num copo é motivis de denguis.
 
                 Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Paisis, filhis, espiritis santis. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. Atirei o pau no gatis, per gatis num morreus.
               </p>
+              <a href="#" title="" class="botao-historia">ver todas as peças</a>
             </div>
-            <div class="col-sm-6 col-md-5">
-              <img src="http://via.placeholder.com/534x800" alt="" class="img-fluid">
+            <div class="col-10 col-md-4 pr-0">
+              <img src="{{asset('assets/galeria/_10.jpg')}}" alt="" class="img-fluid">
             </div>
           </div>
         </div>
         <div class="carousel-item">
           <div class="row justify-content-center">
-            <div class="col-sm-6 col-md-offset-1 col-md-5">
+            <div class="col-10 col-md-4">
               <p class="slide-texto">
                 Mussum Ipsum, cacilds vidis litro abertis. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl. Detraxit consequat et quo num tendi nada. Diuretics paradis num copo é motivis de denguis.
 
                 Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Paisis, filhis, espiritis santis. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. Atirei o pau no gatis, per gatis num morreus.
               </p>
+              <a href="#" title="" class="botao-historia">ver todas as peças</a>
             </div>
-            <div class="col-sm-6 col-md-5">
-              <img src="http://via.placeholder.com/534x800" alt="" class="img-fluid">
+            <div class="col-10 col-md-4 pr-0">
+              <img src="{{asset('assets/galeria/_10.jpg')}}" alt="" class="img-fluid">
             </div>
           </div>
         </div>
         <div class="carousel-item">
           <div class="row justify-content-center">
-            <div class="col-sm-6 col-md-offset-1 col-md-5">
+            <div class="col-10 col-md-4">
               <p class="slide-texto">
                 Mussum Ipsum, cacilds vidis litro abertis. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl. Detraxit consequat et quo num tendi nada. Diuretics paradis num copo é motivis de denguis.
 
                 Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Paisis, filhis, espiritis santis. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. Atirei o pau no gatis, per gatis num morreus.
               </p>
+              <a href="#" title="" class="botao-historia">ver todas as peças</a>
             </div>
-            <div class="col-sm-6 col-md-5">
-              <img src="http://via.placeholder.com/534x800" alt="" class="img-fluid">
+            <div class="col-10 col-md-4 pr-0">
+              <img src="{{asset('assets/galeria/_10.jpg')}}" alt="" class="img-fluid">
             </div>
           </div>
         </div>

@@ -16,10 +16,13 @@ $(document).ready(function(){
             $(this).find('.caption').slideUp(250); //.fadeOut(205)
         });   
 	$(window).scroll(function(){                          
-		if ($(this).scrollTop() > 110) {
-			$('#menu').fadeIn(500);
+		if ($(this).scrollTop() > 250) {
+			// $('.menu2').fadeIn(500);
+			document.getElementById("testemenu").style.top = "0";
 		} else {
-			$('#menu').fadeOut(500);
+			document.getElementById("testemenu").style.top = "-100px";
+			// $('.menu2').fadeOut(500);
+
 		}
 	});
 	$(window).scroll(function(){                          

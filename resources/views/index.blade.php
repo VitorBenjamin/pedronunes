@@ -4,36 +4,35 @@
 <!-- INICIO SESSÃO DE NAVBAR E IMAGEM TOPO -->
 @include('layouts.navs.navbar')
 @include('layouts.navs.navbar-retratil')
-
-<div class="container-fluid img-relative px-0" id="home">
-    <img class="img-fluid" src="{{ asset('assets/img/topo.jpg') }}">
-    <div class="centered titulo-topo d-none d-sm-block">
-        <h1>Awêry, curumin.</h1>
-        <p>NOVEMBRO, 2017</p>
+<header>
+    <div class="container-fluid img-relative px-0" id="home" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url({{asset('assets/img/topo.jpg')}}) center/cover no-repeat;" >
+        <div class="centered titulo-topo d-none d-sm-block">
+            <h1>Awêry, curumin.</h1>
+            <p>NOVEMBRO, 2017</p>
+        </div>
+        <div class="bottom-center text-right etiqueta">
+            <p>
+                <a href="{{route('produto')}}" title="">
+                    <i class="material-icons">loyalty</i>
+                </a>
+                <span>Atxuhinã Pataxó</span> 
+                <br>
+                <span>R$ 30.000,00</span>
+            </p>
+        </div>
     </div>
-    <div class="bottom-center text-right etiqueta">
-        <p>
-            <a href="{{route('produto')}}" title="">
-                <i class="material-icons">loyalty</i>
-            </a>
-            <span>Atxuhinã Pataxó</span> 
-            <br>
-            <span>R$ 30.000,00</span>
-        </p>
-    </div>
-</div>
-
+</header>
 <!-- FIM SESSÃO DE NAVBAR E IMAGEM TOPO -->
 
 <!-- INICIO SESSÃO DE ABOUT -->
 <div class="container-fluid about" id="about">
     <div class="row justify-content-center">
-        <div class="col-sm-6 col-md-4">
+        <div class="col-sm-6 col-md-6 col-lg-4">
             <div class="about-img">
                 <img class="img-fluid" src="{{ asset('assets/img/_PEU0090.jpg') }}">
             </div>
         </div>
-        <div class="col-sm-6 col-md-5 texto">
+        <div class="col-sm-6 col-md-6 col-lg-5 texto">
             <div class="about-texto">
                 Mussum Ipsum, cacilds vidis litro abertis. Pra lá , depois divoltis porris, paradis. Manduma pindureta quium dia nois paga. Delegadis gente finis, bibendum egestas augue arcu ut est. Paisis, filhis, espiritis santis.
 

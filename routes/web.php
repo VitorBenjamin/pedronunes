@@ -15,7 +15,7 @@
 //     return view('index');
 // });
 
-//Auth::routes();
+Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/galeria', 'HomeController@galeria')->name('galeria');
